@@ -1,5 +1,5 @@
 import { Component, AfterViewInit, ViewChild } from '@angular/core';
-import * as Inputmask from "inputmask";
+import Inputmask from "inputmask";
 
 @Component({
   selector: 'my-app',
@@ -15,7 +15,7 @@ export class AppComponent implements  AfterViewInit  {
   ngAfterViewInit(){
     var input = this.calendar.inputfieldViewChild.nativeElement;
 
-    Inputmask.default({ 
+    Inputmask({ 
       alias: "datetime", 
       inputFormat: "dd/mm/yyyy", 
       jitMasking: true}).mask(input);
